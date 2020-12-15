@@ -327,84 +327,11 @@ export default {
     return {
       shoplist: [
         {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
-        },
-        {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg",
-          title: "米家感应灯",
-          con: "举步之明，光明立现",
-          money: 49,
-          href: "/detail/1008",
+          src: "https://s3.ax1x.com/2020/12/15/rKQESP.jpg",
+          title: "呀土豆蜂蜜黄油味",
+          con: "蜂蜜黄油味",
+          money: 7,
+          href: "/detail/1010",
         },
       ],
       navList: [
@@ -558,50 +485,7 @@ export default {
           href: "/detail/1015",
         },
       ],
-      shoplist06: [
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1016",
-        },
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1016",
-        },
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1016",
-        },
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1016",
-        },
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1016",
-        },
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083193859.png",
-          title: "8H护颈乳胶枕 Z2",
-          con: "多重新科技  升级好睡眠",
-          money: 239,
-          href: "/detail/1015",
-        },
-      ],
+      shoplist06: [],
 
       bannerList07: [
         {
@@ -609,15 +493,7 @@ export default {
           href: "/detail/1017",
         },
       ],
-      shoplist07: [
-        {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317120865819.png",
-          title: "小米影视会员卡",
-          con: "畅享海量片库",
-          money: 498,
-          href: "/detail/1018",
-        },
-      ],
+      shoplist07: [],
     };
   },
   components: {
