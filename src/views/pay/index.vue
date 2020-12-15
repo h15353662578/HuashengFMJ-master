@@ -1,9 +1,9 @@
 <template>
   <div class="app-init pay-page scroll-box">
-    <header-back title="关于"></header-back>
+    <header-back title="pay"></header-back>
 
-    <div class="padding-box">
-      <p>Update on 2020/12/15</p>
+    <div>
+      <img src="https://s3.ax1x.com/2020/12/15/rKNI9e.jpg" />
     </div>
   </div>
 </template>
