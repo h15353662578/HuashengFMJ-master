@@ -31,6 +31,5 @@
     "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a3cb6492fd8c3c81909bebd3bc00be64.jpg?w=1080&h=1797"
   ],
   "msg": "请求成功",
-  "code": 200,
-  "mit": "本程序由 jon-millent 独自开发，github@ github.com/jon-millent"
+  "code": 200
 }

@@ -63,13 +63,8 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 1"
     >
-      <swiper :list="bannerList01" class="home-swiper"></swiper>
-
       <div class="shop-item">
-        <img
-          src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
-          alt=""
-        />
+        <img alt="" />
         <div class="shop-box clear">
           <div
             class="shop-box-item"
@@ -93,12 +88,8 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 2"
     >
-      <swiper :list="bannerList02" class="home-swiper"></swiper>
       <div class="shop-item">
-        <img
-          src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
-          alt=""
-        />
+        <img alt="" />
         <div class="shop-box clear">
           <div
             class="shop-box-item"
@@ -122,12 +113,8 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 3"
     >
-      <swiper :list="bannerList03" class="home-swiper"></swiper>
       <div class="shop-item">
-        <img
-          src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
-          alt=""
-        />
+        <img alt="" />
         <div class="shop-box clear">
           <div
             class="shop-box-item"
@@ -151,12 +138,8 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 4"
     >
-      <swiper :list="bannerList04" class="home-swiper"></swiper>
       <div class="shop-item">
-        <img
-          src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
-          alt=""
-        />
+        <img alt="" />
         <div class="shop-box clear">
           <div
             class="shop-box-item"
@@ -230,7 +213,6 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 6"
     >
-      <swiper :list="bannerList06" class="home-swiper"></swiper>
       <div class="shop-item">
         <img
           src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
@@ -259,7 +241,6 @@
       class="app-init scroll-box tab-box footer-hack"
       v-show="navListActiveIndex == 7"
     >
-      <swiper :list="bannerList07" class="home-swiper"></swiper>
       <div class="shop-item">
         <img
           src="http://qiniu.verydog.cn//show.liluo.cc/2018011316464243450.png"
@@ -317,7 +298,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-import swiper from "../../components/swiper";
 import VueDB from "../../util/vue-db/vue-db";
 
 let DB = new VueDB();
@@ -355,12 +335,9 @@ export default {
 
       bannerList01: [
         {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/1888a9f0a6ae807113cb428b9e01f5fe.jpg",
           href: "/detail/1007",
         },
         {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011213275295675.png",
           href: "/detail/1009",
         },
       ],
@@ -390,7 +367,6 @@ export default {
 
       bannerList02: [
         {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011213533255816.png",
           href: "/detail/1011",
         },
       ],
@@ -427,8 +403,6 @@ export default {
 
       bannerList03: [
         {
-          src:
-            "http://qiniu.verydog.cn//show.liluo.cc/2bf70582edb45d83d7120a22c87200c9.jpg",
           href: "/detail/1013",
         },
       ],
@@ -458,7 +432,6 @@ export default {
 
       bannerList04: [
         {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011316542272196.png",
           href: "/detail/1014",
         },
       ],
@@ -481,7 +454,6 @@ export default {
 
       bannerList06: [
         {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317083831934.png",
           href: "/detail/1015",
         },
       ],
@@ -489,16 +461,13 @@ export default {
 
       bannerList07: [
         {
-          src: "http://qiniu.verydog.cn//show.liluo.cc/2018011317121511939.png",
           href: "/detail/1017",
         },
       ],
       shoplist07: [],
     };
   },
-  components: {
-    swiper,
-  },
+  components: {},
   mounted() {
     // 笨方法，设置N个盒子的scroll top
 

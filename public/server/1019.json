@@ -37,6 +37,5 @@
     "//i8.mifile.cn/v1/a1/f0cda212-2805-c03b-f879-dfa2fc3db3e0.jpg?w=1080&h=1343&s=129.4"
   ],
   "msg": "请求成功",
-  "code": 200,
-  "mit": "本程序由 jon-millent 独自开发，github@ github.com/jon-millent"
+  "code": 200
 }
