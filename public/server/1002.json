@@ -1,0 +1,25 @@
+{
+  "id": 1002,
+  "banner": [
+    {
+      "src": "https://s3.ax1x.com/2020/12/08/rSEVgA.jpg"
+    }
+  ],
+  "hotLink": "/detail/1001",
+  "title": "康师傅红烧牛肉面加量 大桶大满足",
+  "bigContent": "【康师傅红烧牛肉面限时特惠：300ml直降1元】",
+  "smallContent": "300ml大桶 / 康师傅红烧牛肉面  / 康师傅",
+  "money": 4.5,
+  "noMoney": 5,
+  "tips": [],
+  "chouse": "康师傅红烧牛肉面 300ml x1",
+  "address": [
+    "西安市",
+    "新城区"
+  ],
+  "pBox": [
+    "https://s3.ax1x.com/2020/12/08/rSEVgA.jpg"
+  ],
+  "msg": "请求成功",
+  "code": 200
+}

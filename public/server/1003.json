@@ -1,0 +1,22 @@
+{
+  "id": 1003,
+  "banner": [
+    {
+      "src": "https://s3.ax1x.com/2020/12/15/rKAkuR.jpg"
+    }
+  ],
+  "title": "可口可乐",
+  "bigContent": "",
+  "smallContent": "可口可乐 / 500ml/",
+  "money": 3,
+  "chouse": "可口可乐500ml x1",
+  "address": [
+    "西安市",
+    "新城区"
+  ],
+  "msg": "请求成功",
+  "code": 200,
+  "pbox": [
+    "https://s3.ax1x.com/2020/12/15/rKAkuR.jpg"
+  ]
+}

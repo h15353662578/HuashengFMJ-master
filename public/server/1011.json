@@ -1,0 +1,19 @@
+{
+  "id": 1011,
+  "banner": [
+    {
+      "src": "https://s3.ax1x.com/2020/12/15/rKQRTH.jpg"
+    }
+  ],
+  "title": "米多奇 小馍丁",
+  "smallContent": "小馍丁",
+  "money": 2,
+  "chouse": "米多奇小馍丁 x1",
+  "address": [
+    "西安市",
+    "新城区"
+  ],
+  "pBox": [],
+  "msg": "请求成功",
+  "code": 200
+}

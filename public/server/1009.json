@@ -1,0 +1,19 @@
+{
+  "id": 1009,
+  "banner": [
+    {
+      "src": "https://s3.ax1x.com/2020/12/15/rKQESP.jpg"
+    }
+  ],
+  "title": "呀土豆",
+  "smallContent": "蜂蜜黄油味",
+  "money": 7,
+  "chouse": "呀土豆 蜂蜜黄油味 x1",
+  "address": [
+    "西安市",
+    "新城区"
+  ],
+  "pBox": [],
+  "msg": "请求成功",
+  "code": 200
+}

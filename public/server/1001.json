@@ -1,0 +1,27 @@
+{
+  "id": 1001,
+  "banner": [
+    {
+      "src": "https://s3.ax1x.com/2020/12/08/rSPrIH.jpg"
+    }
+  ],
+  "hotLink": "/detail/1001",
+  "title": "康师傅冰红茶",
+  "bigContent": " 【康师傅品牌日限时特惠：冰红茶直降0.5元】",
+  "smallContent": "康师傅冰红茶 / 500ml /  康师傅",
+  "money": 2.5,
+  "noMoney": 3,
+  "tips": [
+    "直降0.5元"
+  ],
+  "chouse": " 康师傅冰红茶 x1",
+  "address": [
+    "西安市",
+    "新城区"
+  ],
+  "pBox": [
+    "https://s3.ax1x.com/2020/12/08/rSkRQ1.jpg"
+  ],
+  "msg": "请求成功",
+  "code": 200
+}
