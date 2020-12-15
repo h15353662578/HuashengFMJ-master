@@ -2,9 +2,6 @@
   <div class="app-init home-index">
     <header class="public-header">
       <form class="search-box clear">
-        <div class="fl logo">
-          <span class="iconfont icon-xiaomi"></span>
-        </div>
         <div class="input-box" @click="$router.openPage('/search')">
           <span class="iconfont icon-sousuo-copy absolute"></span>
           <input
