@@ -7,7 +7,15 @@
     <div class="wrap-box">
       <div class="left-menu absolute scroll-box" ref="left">
         <ul>
-          <li class="item" v-for="(target, index) in dataItem" :key="index" :class="{ 'active': index == active }" @click="jumpToTarget(index)">{{target.name}}</li>
+          <li
+            class="item"
+            v-for="(target, index) in dataItem"
+            :key="index"
+            :class="{ active: index == active }"
+            @click="jumpToTarget(index)"
+          >
+            {{ target.name }}
+          </li>
         </ul>
       </div>
 
@@ -15,12 +23,17 @@
         <ul>
           <li class="item" v-for="(target, index) in dataItem" :key="index">
             <p class="title">
-              <span>{{target.name}}</span>
+              <span>{{ target.name }}</span>
             </p>
             <div class="shop-item-wrap clear">
-              <div class="shop-item" v-for="(shop, index) in target.children" :key="index" @click="$router.openPage(shop.link)">
-                <p><img :src="shop.src" alt=""></p>
-                <p class="name">{{shop.name}}</p>
+              <div
+                class="shop-item"
+                v-for="(shop, index) in target.children"
+                :key="index"
+                @click="$router.openPage(shop.link)"
+              >
+                <p><img :src="shop.src" alt="" /></p>
+                <p class="name">{{ shop.name }}</p>
               </div>
             </div>
           </li>
@@ -31,581 +44,124 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import headerBack from '../../components/header-back'
-  import _ from 'lodash'
-  import VueDB from '../../util/vue-db/vue-db'
+import headerBack from "../../components/header-back";
+import _ from "lodash";
+import VueDB from "../../util/vue-db/vue-db";
 
-  let DB = new VueDB()
+let DB = new VueDB();
 
-  export default{
-    name: 'classification',
-    data(){
-      return {
-        active: 0,
-        dataItem: [
-          {
-            name: '新品',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },{
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '手机',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '电视',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '电脑',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '家电',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '路由',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '智能',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '电源',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '耳机',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '音箱',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '礼品',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '生活',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '米粉卡',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
-          },
-          {
-            name: '零售店',
-            children: [
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              },
-              {
-                name: '小米5s',
-                src: 'http://qiniu.verydog.cn//show.liluo.cc/img_0505.png',
-                link: '/detail/1019'
-              }
-            ]
+export default {
+  name: "classification",
+  data() {
+    return {
+      active: 0,
+      dataItem: [
+        {
+          name: "新品",
+          children: [
+            {
+              name: "红烧牛肉面",
+              link: "/detail/1002",
+            },
+          ],
+        },
+        {
+          name: "酒水饮料",
+          children: [
+            {
+              name: " 康师傅冰红茶",
+              link: "/detail/1001",
+            },
+          ],
+        },
+        {
+          name: "零食小食",
+          children: [],
+        },
+        {
+          name: "生活日用",
+          children: [],
+        },
+        {
+          name: "方便速食",
+          children: [
+            {
+              name: "红烧牛肉面",
+              link: "/detail/1002",
+            },
+          ],
+        },
+      ],
+
+      offset: [],
+    };
+  },
+  components: {
+    headerBack,
+  },
+  methods: {
+    jumpToTarget(index) {
+      var scrollTop = this.offset[index];
+      this.$refs.rightView.scrollTop = scrollTop;
+
+      setTimeout(() => {
+        this.active = index;
+      }, 10);
+    },
+  },
+  mounted() {
+    var scrollDB = {
+      left: DB.getItemOnce("classification-left-scrollTop").toNumber(),
+      right: DB.getItemOnce("classification-right-scrollTop").toNumber(),
+    };
+    setTimeout(() => {
+      _.forEach(
+        this.$refs.rightView.querySelectorAll(".item"),
+        (value, key) => {
+          this.offset.push(value.offsetHeight * key);
+        }
+      );
+
+      var mySort = this.offset;
+
+      this.$refs.rightView.addEventListener("scroll", () => {
+        var eScrollTop = this.$refs.rightView.scrollTop;
+
+        for (var indexer = 0; indexer < mySort.length; indexer++) {
+          if (eScrollTop > mySort[indexer]) {
+            this.active = indexer;
           }
-        ],
+        }
+      });
 
-        offset: []
-      }
-    },
-    components: {
-      headerBack
-    },
-    methods: {
-      jumpToTarget(index) {
-
-
-        var scrollTop = this.offset[index];
-        this.$refs.rightView.scrollTop = scrollTop;
-
-        setTimeout(()=>{
-          this.active = index
-        }, 10)
-      }
-    },
-    mounted() {
-
-      var scrollDB = {
-        left: DB.getItemOnce('classification-left-scrollTop').toNumber(),
-        right: DB.getItemOnce('classification-right-scrollTop').toNumber()
-      }
-      setTimeout(()=>{
-        _.forEach(this.$refs.rightView.querySelectorAll('.item'), (value, key)=>{
-          this.offset.push(value.offsetHeight*key)
-        })
-
-
-        var mySort = this.offset;
-
-        this.$refs.rightView.addEventListener('scroll', ()=>{
-
-          var eScrollTop = this.$refs.rightView.scrollTop;
-
-          for(var indexer=0; indexer<mySort.length; indexer++){
-            if(eScrollTop > mySort[indexer]){
-              this.active =  indexer;
-            }
-          }
-
-        })
-
-        setTimeout(()=>{
-          this.$refs.left.scrollTop = scrollDB.left
-          this.$refs.rightView.scrollTop = scrollDB.right
-        }, 10)
-      }, 100)
-
-
-
-    },
-    beforeRouteLeave (to, from, next) {
-      DB.setItem('classification-left-scrollTop', this.$refs.left.scrollTop)
-      DB.setItem('classification-right-scrollTop', this.$refs.rightView.scrollTop)
-      next();
-    }
-  }
+      setTimeout(() => {
+        this.$refs.left.scrollTop = scrollDB.left;
+        this.$refs.rightView.scrollTop = scrollDB.right;
+      }, 10);
+    }, 100);
+  },
+  beforeRouteLeave(to, from, next) {
+    DB.setItem("classification-left-scrollTop", this.$refs.left.scrollTop);
+    DB.setItem(
+      "classification-right-scrollTop",
+      this.$refs.rightView.scrollTop
+    );
+    next();
+  },
+};
 </script>
 
 <style type="text/sass" lang="sass">
-  @import "../../assets/sass/util"
-  .classification
-    background-color: #fff
+@import "../../assets/sass/util"
+.classification
+  background-color: #fff
 
-    .wrap-box
-      position: absolute
-      width: 100%
-      top: getIphonese(100px)
-      left: 0px
-      bottom: $footerHeight
+  .wrap-box
+    position: absolute
+    width: 100%
+    top: getIphonese(100px)
+    left: 0px
+    bottom: $footerHeight
 
     .left-menu
       width: getIphonese(133px)
